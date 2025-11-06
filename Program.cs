@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace trackingapp
 {
@@ -13,7 +15,12 @@ namespace trackingapp
 
         public static void Main(string[] args)
         {
+            Console.Clear();
+            start();
+        }
 
+        static void start()
+        {
             Console.WriteLine("Heute oder anderes Datum?\n\n 1 heutiges Datum\n 2 anderes Datum\n");
             choice = Console.ReadLine();
             switch (choice)
@@ -35,7 +42,7 @@ namespace trackingapp
             string inputcsv;
             Entry newEntry = new();
 
-            
+
             Console.Write("\nJahr? ");
             newEntry.year = Convert.ToInt32(Console.ReadLine());
 
@@ -50,12 +57,16 @@ namespace trackingapp
 
             Console.Write($"Stimmt das? {newEntry.day}.{newEntry.month}.{newEntry.year}: {newEntry.amount} J/n ");
             choice = Console.ReadLine();
-            if(choice is not null || choice != "J")
+            if (choice is not null || choice != "J")
             {
                 CreateEntry();
             }
             inputcsv = $"{newEntry.year},{newEntry.month},{newEntry.day},\"{newEntry.amount}\"";
             File.AppendAllText("entries.csv", $"\n{inputcsv}");
+            Console.WriteLine("Der Eintrag wurde erstellt.");
+            Task.Delay(3000);
+            Console.Clear();
+            start();
         }
     }
 }

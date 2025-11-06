@@ -1,0 +1,15 @@
+/home/Henri/Dokumente/projects/c#/new-money-tracking-app/bin/Debug/net9.0/new-money-tracking-app
+/home/Henri/Dokumente/projects/c#/new-money-tracking-app/bin/Debug/net9.0/new-money-tracking-app.deps.json
+/home/Henri/Dokumente/projects/c#/new-money-tracking-app/bin/Debug/net9.0/new-money-tracking-app.runtimeconfig.json
+/home/Henri/Dokumente/projects/c#/new-money-tracking-app/bin/Debug/net9.0/new-money-tracking-app.dll
+/home/Henri/Dokumente/projects/c#/new-money-tracking-app/bin/Debug/net9.0/new-money-tracking-app.pdb
+/home/Henri/Dokumente/projects/c#/new-money-tracking-app/obj/Debug/net9.0/new-money-tracking-app.GeneratedMSBuildEditorConfig.editorconfig
+/home/Henri/Dokumente/projects/c#/new-money-tracking-app/obj/Debug/net9.0/new-money-tracking-app.AssemblyInfoInputs.cache
+/home/Henri/Dokumente/projects/c#/new-money-tracking-app/obj/Debug/net9.0/new-money-tracking-app.AssemblyInfo.cs
+/home/Henri/Dokumente/projects/c#/new-money-tracking-app/obj/Debug/net9.0/new-money-tracking-app.csproj.CoreCompileInputs.cache
+/home/Henri/Dokumente/projects/c#/new-money-tracking-app/obj/Debug/net9.0/new-money-tracking-app.sourcelink.json
+/home/Henri/Dokumente/projects/c#/new-money-tracking-app/obj/Debug/net9.0/new-money-tracking-app.dll
+/home/Henri/Dokumente/projects/c#/new-money-tracking-app/obj/Debug/net9.0/refint/new-money-tracking-app.dll
+/home/Henri/Dokumente/projects/c#/new-money-tracking-app/obj/Debug/net9.0/new-money-tracking-app.pdb
+/home/Henri/Dokumente/projects/c#/new-money-tracking-app/obj/Debug/net9.0/new-money-tracking-app.genruntimeconfig.cache
+/home/Henri/Dokumente/projects/c#/new-money-tracking-app/obj/Debug/net9.0/ref/new-money-tracking-app.dll
