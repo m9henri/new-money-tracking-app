@@ -19,34 +19,35 @@
         {
             Console.WriteLine("Heutiges oder anderes Datum?\n\n 1 heutiges Datum\n 2 anderes Datum\n");
             choice = Console.ReadLine();
-            switch (choice)
+            if (choice != "1" && choice != "2")
             {
-                case "1":
-                    Environment.Exit(2); // temp fix
-                    break;
-                case "2":
-                    CreateEntry();
-                    break;
-                default:
-                    Environment.Exit(1);
-                    break;
+                Console.WriteLine("Invalid Number");
+                Environment.Exit(1);
             }
+            CreateEntry();
         }
 
         static void CreateEntry()
         {
             string inputcsv;
             Entry newEntry = new();
+            DateTime date = DateTime.Now;
+            newEntry.year = date.Year;
+            newEntry.month = date.Month;
+            newEntry.day = date.Day;
 
-            Console.Write("\nTag? ");
-            newEntry.day = Convert.ToInt32(Console.ReadLine());
+            if (choice == "2")
+            {
+                Console.Write("\nTag? ");
+                newEntry.day = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Monat? ");
-            newEntry.month = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Monat? ");
+                newEntry.month = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Jahr? ");
-            newEntry.year = Convert.ToInt32(Console.ReadLine());
-
+                Console.Write("Jahr? ");
+                newEntry.year = Convert.ToInt32(Console.ReadLine());
+            }
+            
             Console.Write("Wie viel hast du ausgegeben? ");
             newEntry.amount = Convert.ToSingle(Console.ReadLine());
 
