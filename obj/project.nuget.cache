@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wHTnUQbrc2o=",
+  "success": true,
+  "projectFilePath": "/home/Henri/Dokumente/projects/c#/new-money-tracking-app/new-money-tracking-app.csproj",
+  "expectedPackageFiles": [
+    "/home/Henri/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.9/microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

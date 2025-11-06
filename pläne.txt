@@ -1,0 +1,8 @@
+ - heutiges Datum
+ - Geldeinträge machen ✓
+ - Geldeinträge und Datum mit .csv speichern ✓
+ - Datum und Geldeinträge aus der Datei lesen und separieren
+ - Geldeinträge nach Monat sortieren
+ - Geldeinträge zusammenrechnen und 300€ - Geldeinträge rechnen
+ - Alle Geldeinträge nach Monat zusammenrechnen und addieren
+ - GUI
