@@ -1,12 +1,8 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
-
-namespace trackingapp
+﻿namespace trackingapp
 {
     class Program
     {
-        public static string? choice;
+        public static string choice;
         class Entry
         {
             public int day, month, year;
@@ -26,13 +22,13 @@ namespace trackingapp
             switch (choice)
             {
                 case "1":
-                    System.Environment.Exit(2); // temp fix
+                    Environment.Exit(2); // temp fix
                     break;
                 case "2":
                     CreateEntry();
                     break;
                 default:
-                    System.Environment.Exit(1);
+                    Environment.Exit(1);
                     break;
             }
         }
@@ -55,27 +51,25 @@ namespace trackingapp
             newEntry.amount = Convert.ToSingle(Console.ReadLine());
 
             Console.Write($"Ist das richtig? {newEntry.day}.{newEntry.month}.{newEntry.year}: {newEntry.amount} [J/n] ");
-            choice = Console.ReadLine(); // new line != null
-            if (choice is not null || choice != "J")
+            choice = Console.ReadLine();
+            if (choice != "" && choice != "J")
             {
-                // Console.Clear();
-                // CreateEntry();
-                Console.WriteLine(choice);
-                System.Environment.Exit(-67);
+                Console.Clear();
+                CreateEntry();
             }
 
             if (newEntry.month > 12 || newEntry.day > 31 || newEntry.amount <= 0)
             {
                 Console.WriteLine("Dein Datum oder der Betrag stimmt nicht.");
-                Task.Delay(2500);
+                Thread.Sleep(2500);
                 Console.Clear();
                 CreateEntry();
             }
-            
+
             inputcsv = $"{newEntry.year},{newEntry.month},{newEntry.day},\"{newEntry.amount}\"";
             File.AppendAllText("entries.csv", $"\n{inputcsv}");
-            Console.WriteLine("Eintrag wurde erstellt.");
-            Task.Delay(3000);
+            Console.Write("Eintrag wurde erstellt.");
+            Thread.Sleep(3000);
             Console.Clear();
             Start();
         }
