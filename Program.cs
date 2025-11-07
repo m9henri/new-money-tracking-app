@@ -47,7 +47,7 @@
                 Console.Write("Jahr? ");
                 newEntry.year = Convert.ToInt32(Console.ReadLine());
             }
-            
+
             Console.Write("Wie viel hast du ausgegeben? ");
             newEntry.amount = Convert.ToSingle(Console.ReadLine());
 
@@ -73,6 +73,21 @@
             Thread.Sleep(3000);
             Console.Clear();
             Start();
+        }
+        
+        static void SortEntries()
+        {
+            string[] listinput = File.ReadAllLines("entries.csv");
+            List<int> allyears = [];
+            List<int> allmonths = [];
+            List<int> allmoney = [];
+
+            for (int i = 0; i < listinput.Length; i++)
+            {
+                string[] columns = listinput[i].Split(",");
+                columns[2] = columns[2].Replace(".", ",");
+                columns[2] = columns[2].Replace("\"", "");
+            }
         }
     }
 }
